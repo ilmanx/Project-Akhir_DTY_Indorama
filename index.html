@@ -1,0 +1,1789 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DTY Indorama x PEI</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJxjZrKz3OG6gqXuxfV47yOYj4Q2eyWz7oZ3/m5ROZyl0iCTcTgB6z4v7lMZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+       body {
+        font-family: 'Poppins', sans-serif;
+        line-height: 1.6;
+        overflow-x: hidden;
+    }
+
+    /* Smooth scrolling */
+    html {
+        scroll-behavior: smooth;
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: linear-gradient(45deg, #667eea, #764ba2);
+        border-radius: 10px;
+    }
+
+    /* Navbar */
+    .navbar {
+        background: rgba(255, 255, 255, 0.95) !important;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+    }
+
+    .navbar-brand {
+        font-weight: 700;
+        font-size: 1.8rem;
+        background: linear-gradient(45deg, #667eea, #764ba2);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .nav-link {
+        font-weight: 500;
+        color: #333 !important;
+        transition: all 0.3s ease;
+        position: relative;
+    }
+
+    .nav-link:hover {
+        color: #667eea !important;
+        transform: translateY(-2px);
+    }
+
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 50%;
+        background: linear-gradient(45deg, #667eea, #764ba2);
+        transition: all 0.3s ease;
+        transform: translateX(-50%);
+    }
+
+    .nav-link:hover::after {
+        width: 100%;
+    }
+
+ .hero {
+  background: #ffffff;
+  min-height: 100vh;
+  padding: 80px 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Heading */
+.hero-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #222;
+}
+
+/* Badge di atas heading */
+.company-badge {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 25px;
+  background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+  color: #fff;
+  font-weight: 500;
+}
+
+/* Tombol */
+.btn-orange {
+  background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+  border: none;
+  padding: 10px 24px;
+  border-radius: 50px;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn-orange:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(255, 107, 107, 0.4);
+}
+
+/* Accent text */
+.text-orange {
+  color: #ee5a24;
+}
+
+    .hero .container {
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    }
+
+    .hero-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  margin-top: 20px;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.company-badge {
+  font-weight: 500;
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 25px;
+  background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+  color: #fff;
+}
+
+.text-orange {
+  color: #ee5a24;
+}
+
+.btn-orange {
+  background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+  border: none;
+  padding: 10px 24px;
+  border-radius: 50px;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn-orange:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(255,107,107,0.4);
+}
+
+    .hero-text {
+    flex: 1;
+    min-width: 300px;
+    padding-right: 40px;
+    }
+
+    .hero-text h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 20px;
+    }
+
+    .hero-text p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+    }
+
+    .hero-img {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+    }
+
+    .hero-img img {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+    }
+
+    .btn-custom {
+        background: linear-gradient(45deg, #667eea, #764ba2) !important;
+        border: none;
+        padding: 12px 30px;
+        border-radius: 50px;
+        color: white;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s ease;
+    }
+
+    .btn-custom:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255,107,107,0.4);
+    }
+
+    .btn-custom {
+        background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+        border: none;
+        padding: 12px 30px;
+        border-radius: 50px;
+        color: white;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s ease;
+        animation: fadeInUp 1s ease 0.4s both;
+    }
+
+    .btn-custom:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px rgba(255,107,107,0.4);
+        color: white;
+    }
+
+    /* Floating elements */
+    .floating-element {
+        position: absolute;
+        opacity: 0.1;
+        animation: float 6s ease-in-out infinite;
+    }
+
+    .floating-element:nth-child(1) {
+        top: 20%;
+        left: 10%;
+        animation-delay: 0s;
+    }
+
+    .floating-element:nth-child(2) {
+        top: 60%;
+        right: 10%;
+        animation-delay: 2s;
+    }
+
+    .floating-element:nth-child(3) {
+        bottom: 20%;
+        left: 20%;
+        animation-delay: 4s;
+    }
+
+    /* Section styling */
+    .section {
+        padding: 80px 0;
+        position: relative;
+    }
+
+    .section-title {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .section-title h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 1rem;
+        position: relative;
+    }
+
+    .section-title h2::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(45deg, #667eea, #764ba2);
+        border-radius: 2px;
+    }
+
+    .section-title p {
+        color: #666;
+        font-size: 1.1rem;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    /* Cards */
+    .card-custom {
+        background: white;
+        border-radius: 20px;
+        padding: 40px 30px;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+        border: none;
+        height: 100%;
+    }
+
+    .card-custom:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+    }
+
+    .card-icon {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(45deg, #667eea, #764ba2);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        color: white;
+        font-size: 2rem;
+    }
+
+    /* Process comparison */
+    .process-card {
+        background: white;
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+        margin-bottom: 30px;
+    }
+
+    .process-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    }
+
+    .process-header {
+        background: linear-gradient(45deg, #667eea, #764ba2);
+        color: white;
+        padding: 15px 25px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        text-align: center;
+        font-weight: 600;
+        font-size: 1.2rem;
+    }
+
+    /* Stats */
+    .stats-section {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+    }
+
+    .stat-item {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .stat-number {
+        font-size: 3rem;
+        font-weight: 700;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .stat-label {
+        font-size: 1.1rem;
+        opacity: 0.9;
+    }
+
+    /* Quality section */
+    .quality-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .quality-item {
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+
+    .quality-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    }
+
+    .grade-badge {
+        display: inline-block;
+        padding: 8px 20px;
+        background: linear-gradient(45deg, #667eea, #764ba2);
+        color: white;
+        border-radius: 25px;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+
+    /* Footer */
+    .footer {
+        background: #2c3e50;
+        color: white;
+        padding: 60px 0 30px;
+    }
+
+    .footer h5 {
+        color: #ecf0f1;
+        margin-bottom: 20px;
+        font-weight: 600;
+    }
+
+    .footer p, .footer li {
+        color: #bdc3c7;
+        margin-bottom: 10px;
+    }
+
+    .footer-bottom {
+        border-top: 1px solid #34495e;
+        margin-top: 40px;
+        padding-top: 20px;
+        text-align: center;
+        color: #95a5a6;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(-20px);
+        }
+    }
+
+    .fade-in {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.6s ease;
+    }
+
+    .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Image placeholder */
+    .image-placeholder {
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 300px;
+        color: #666;
+        font-size: 1.2rem;
+        text-align: center;
+        border: 2px dashed #ddd;
+        transition: all 0.3s ease;
+         max-width: 550px;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .image-placeholder:hover {
+        border-color: #667eea;
+        color: #667eea;
+    }
+
+    .image-placeholder i {
+        font-size: 3rem;
+        margin-bottom: 15px;
+        display: block;
+    }
+
+    /* Fix desktop layout */
+    .container {
+        max-width: 1200px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    @media (max-width: 1400px) {
+        .container {
+            padding-left: 100px !important;
+            padding-right: 100px !important;
+        }
+    }
+
+    .section {
+        padding: 100px 0;
+    }
+
+    .row {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    .row > * {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* Better spacing for cards */
+    .card-custom {
+        margin-bottom: 30px;
+    }
+
+    .process-card {
+        height: 100%;
+    }
+
+    /* Grid alignment */
+    .content-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+        margin-bottom: 60px;
+    }
+
+    .content-grid.reverse {
+        direction: rtl;
+    }
+
+    .content-grid.reverse > * {
+        direction: ltr;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .hero h1 {
+            font-size: 2.5rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2rem;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+        }
+
+        .content-grid {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        .container {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+
+    .hero-custom {
+        padding-left: 100px !important;
+        padding-right: 100px !important;
+        background: #ffffff;
+    }
+
+.hero-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 8px 18px;
+  margin-bottom: 20px;
+  border-radius: 25px;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.highlight {
+  color: #ee5a24;
+}
+
+.btn-hero {
+  background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+  color: white;
+  padding: 12px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  transition: 0.3s ease;
+}
+
+.btn-hero:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(255,107,107,0.3);
+}
+
+.hero-image {
+  flex: 1;
+  text-align: center;
+  min-width: 300px;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+.gradient-text {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 2rem; /* Sesuaikan ukuran font */
+    font-weight: bold;
+}
+
+.about-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 80px;
+}
+.about-grid.reverse {
+  flex-direction: row-reverse;
+}
+.about-text {
+  flex: 1;
+  min-width: 300px;
+}
+.about-image {
+  flex: 1;
+  min-width: 300px;
+}
+.text-gradient {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.checklist {
+  list-style: none;
+  padding: 0;
+}
+.checklist li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+.checklist li i {
+  color: #28a745;
+  margin-right: 8px;
+}
+.caption {
+  font-size: 0.85rem;
+}
+.card-custom {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+.card-icon {
+  color: #667eea;
+}
+
+.card-custom {
+  background-color: #fff;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.card-custom:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: #fff;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.keunggulan-section {
+  background: #f9f9f9;
+  padding: 80px 20px;
+}
+
+.keunggulan-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.keunggulan-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.keunggulan-title span {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.keunggulan-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.keunggulan-card {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.keunggulan-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.icon-circle {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.keunggulan-card h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.keunggulan-card p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.comparison-section {
+  background: #f8f9fa;
+  padding: 80px 20px;
+}
+
+.comparison-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.comparison-title h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.comparison-title p {
+  color: #555;
+  font-size: 1rem;
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.comparison-card {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.comparison-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.comparison-header {
+  font-weight: 600;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  color: white;
+  display: inline-block;
+}
+
+.comparison-header.spinning {
+  background: linear-gradient(45deg, #4facfe, #00f2fe);
+}
+
+.comparison-header.dty {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+}
+
+.comparison-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.comparison-list li {
+  padding: 10px 0;
+  border-bottom: 1px dashed #eee;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.comparison-list li:last-child {
+  border-bottom: none;
+}
+
+.production-section {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 100px 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.stat-box {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.stat-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.stat-label {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.list-icons {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 20px;
+}
+
+.list-icons li {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+}
+
+.image-placeholder {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 40px 20px;
+  border-radius: 15px;
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+/* SECTION: Quality Control */
+#quality {
+  background-color: #ffffff;
+  padding: 100px 0;
+}
+
+#quality .section-title h2 {
+  font-weight: 700;
+  font-size: 2.4rem;
+  color: #333;
+}
+
+#quality .section-title p {
+  color: #555;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+/* Konten Grid 2 Kolom */
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 80px;
+  align-items: center;
+}
+
+.content-grid.reverse {
+  direction: rtl;
+}
+.content-grid.reverse > * {
+  direction: ltr;
+}
+
+/* Placeholder Gambar QC */
+.image-placeholder {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 15px;
+  padding: 40px 20px;
+  text-align: center;
+  color: #444;
+  border: 2px dashed #ccc;
+  transition: 0.3s ease;
+}
+
+.image-placeholder:hover {
+  border-color: #667eea;
+  color: #667eea;
+}
+
+.image-placeholder i {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  display: block;
+}
+
+/* Quality Grade Cards */
+.quality-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.quality-item {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  padding: 30px 20px;
+  transition: all 0.3s ease;
+  border-top: 5px solid #667eea;
+}
+
+.quality-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.grade-badge {
+  background: #667eea;
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 30px;
+  display: inline-block;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.quality-item h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.quality-item p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* SECTION: Alur Produksi */
+.production-flow {
+  background-color: #fefefe;
+  padding: 100px 0;
+}
+
+.flow-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px 30px;
+  margin-top: 40px;
+}
+
+.flow-step {
+  background: #fff;
+  padding: 25px 20px;
+  border-left: 5px solid #667eea;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+}
+
+.flow-step:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.flow-step h5 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.flow-step p {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0;
+}
+
+/* SECTION: Kontak & Mitra */
+.contact-section {
+  background-color: #f9f9f9;
+  padding: 100px 0;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.contact-info h4,
+.contact-partners h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.contact-info p,
+.contact-partners p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.partners-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.partners-gallery img {
+  width: 100px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+  background: #fff;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+}
+
+.partners-gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .partners-gallery {
+    justify-content: center;
+  }
+}
+
+/* Modern Footer */
+.footer-modern {
+  background: #1f2d3d;
+  color: #e0e0e0;
+  padding: 60px 0 30px;
+  font-size: 0.95rem;
+}
+
+.footer-modern h5 {
+  color: #ffffff;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.footer-modern p {
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-list li {
+  margin-bottom: 10px;
+  color: #bbb;
+}
+
+.footer-list li i {
+  color: #ffc107;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  color: #aaa;
+  font-size: 0.85rem;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+/* Responsive alur produksi*/
+@media (max-width: 768px) {
+  .flow-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 992px) {
+  .content-grid,
+  .content-grid.reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .quality-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .quality-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 992px) {
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+<!-- Hero Section -->
+<section class="hero-custom" style="padding-bottom: 0px !important;">
+  <div class="hero-wrapper">
+    <!-- Kiri: Teks -->
+    <div class="hero-text">
+      <div class="hero-badge">
+        <i class="bi bi-gear-fill me-2"></i>
+        Menyatukan Dunia Industri dan Pendidikan Sejak 2013
+      </div>
+      <h1>DTY - Draw Textured Yarn</h1>
+        <p>Mitra terpercaya dalam industri tekstil sejak 2013. Menghadirkan solusi benang berkualitas tinggi untuk pasar domestik dan ekspor dengan teknologi Jepang terdepan.</p>
+        <a href="#about" class="btn-custom">
+            <i class="fas fa-arrow-down me-2"></i> <span> Pelajari Lebih Lanjut</span>
+        </a>
+    </div>
+
+    <!-- Kanan: Gambar -->
+    <div class="hero-image">
+      <img src="Gambar/dty1.png" alt="Gedung DTY">
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section about-section" style="padding-bottom: 0px !important; padding-top: 50px !important;">
+  <div class="container">
+
+    <!-- Judul -->
+    <div class="section-title text-center">
+      <h2>Tentang <span class="text-gradient">DTY</span></h2>
+      <p>Sinergi industri dan pendidikan dalam menghasilkan benang berkualitas tinggi sejak 2013</p>
+    </div>
+
+    <!-- Unit DTY Overview -->
+    <div class="about-grid">
+      <div class="about-text">
+        <h3 class="text-gradient">Unit DTY</h3>
+        <p>Didirikan tahun 2013, unit produksi DTY merupakan hasil kolaborasi antara dunia industri dan pendidikan melalui kemitraan dengan Politeknik Enjinering Indorama (PEI). Fokus kami tidak hanya pada produksi benang berkualitas tinggi, tapi juga pada pengalaman nyata bagi mahasiswa di lingkungan industri tekstil modern. Mahasiswa terlibat langsung dalam proses industri mulai dari pengoperasian mesin, pengendalian mutu, hingga memahami standar kerja global.</p>
+        <p></p>
+      </div>
+      <div class="about-image">
+        <img src="Gambar/dty2.jpeg" width="450px" height="266px" style="object-fit: cover;" alt="Pabrik DTY" class="img-fluid shadow rounded">
+      </div>
+    </div>
+
+    <!-- Teknologi Murata -->
+    <div class="about-grid reverse">
+      <div class="about-image text-center">
+        <img src="Gambar/mesin murata.jpeg" width="450px" height="266px" style="object-fit: cover;" alt="Pabrik DTY" class="img-fluid shadow rounded"> 
+      </div>
+      <div class="about-text">
+        <h3 class="text-gradient">Teknologi Jepang – Mesin Murata</h3>
+        <p>Kami menggunakan teknologi Murata dari Jepang untuk memproduksi benang tekstur berkualitas premium. Mesin ini mampu beroperasi 24 jam nonstop dengan efisiensi tinggi.</p>
+        <ul class="checklist">
+            <li><i class="fas fa-check"></i> 216 gulungan per mesin (setara 4 troli)</li>
+            <li><i class="fas fa-check"></i> Kecepatan 660 RPM</li>
+            <li><i class="fas fa-check"></i> Operasional 24 jam tanpa henti</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- keunggulan -->
+<section class="keunggulan-section" style="padding-top: 0px !important;">
+  <div class="keunggulan-container">
+    <h2 class="keunggulan-title">Keunggulan <span>Unit DTY</span></h2>
+    <div class="keunggulan-grid">
+      <!-- Card 1 -->
+      <div class="keunggulan-card">
+        <div class="icon-circle"><i class="fas fa-globe"></i></div>
+        <h4>Jangkauan Global</h4>
+        <p>Melayani pasar domestik dan ekspor ke Turki, Thailand, dan Amerika dengan standar kualitas internasional.</p>
+      </div>
+      <!-- Card 2 -->
+      <div class="keunggulan-card">
+        <div class="icon-circle"><i class="fas fa-handshake"></i></div>
+        <h4>Kemitraan Solid</h4>
+        <p>Kerja sama dengan PEI sejak 2013 membuktikan komitmen kami dalam memberikan layanan terbaik.</p>
+      </div>
+      <!-- Card 3 -->
+      <div class="keunggulan-card">
+        <div class="icon-circle"><i class="fas fa-industry"></i></div>
+        <h4>Teknologi Jepang</h4>
+        <p>Menggunakan mesin Murata dari Jepang untuk menghasilkan benang tekstur berkualitas premium.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Alur Produksi -->
+<section id="alur" class="section production-flow" style="padding-top: 0px !important;">
+  <div class="container">
+    <div class="section-title fade-in">
+      <h2>Alur Produksi</h2>
+      <p>Proses produksi benang DTY yang terintegrasi dengan kontrol kualitas ketat untuk hasil terbaik.</p>
+    </div>
+
+    <div class="flow-grid fade-in">
+      <div class="flow-step">
+        <h5>Persiapan Bahan Baku</h5>
+        <p>Memulai dengan benang POY dari proses spinning yang belum diberi tekstur dan warna.</p>
+      </div>
+      <div class="flow-step">
+        <h5>Pemasangan Gulungan POY</h5>
+        <p>Gulungan POY dipasang pada rak mesin DTY, dengan 12 gulungan aktif dan 12 cadangan.</p>
+      </div>
+      <div class="flow-step">
+        <h5>Proses Pembentukan Tekstur</h5>
+        <p>Benang melalui proses pemanasan, pemuntiran, pendinginan, dan penggulungan ulang menggunakan mesin Murata.</p>
+      </div>
+      <div class="flow-step">
+        <h5>Penggulungan Ulang Benang</h5>
+        <p>Benang bertekstur digulung kembali secara otomatis menjadi gulungan akhir siap proses selanjutnya.</p>
+      </div>
+      <div class="flow-step">
+        <h5>Pengujian Kualitas</h5>
+        <p>Benang diuji dengan proses rajut dan pewarnaan untuk memastikan warna seragam dan kualitas optimal.</p>
+      </div>
+      <div class="flow-step">
+        <h5>Klasifikasi Grade</h5>
+        <p>Benang dikelompokkan berdasarkan berat dan mutu menjadi grade AX, A, B, dan C.</p>
+      </div>
+      <div class="flow-step">
+        <h5>Pengemasan</h5>
+        <p>Benang dikemas dalam plastik, hasil produksi satu mesin sekitar 216 gulungan (4 troli).</p>
+      </div>
+      <div class="flow-step">
+        <h5>Distribusi</h5>
+        <p>Produk benang siap dikirim ke gudang Indorama maupun langsung ke pelanggan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Process Comparison -->
+<section id="process-comparison" class="comparison-section" style="padding-top: 0px !important;">
+  <div class="container">
+    <div class="comparison-title">
+      <h2>Perbandingan Proses Produksi</h2>
+      <p>Memahami perbedaan antara proses Spinning dan DTY untuk efisiensi maksimal</p>
+    </div>
+
+    <div class="comparison-grid">
+      <!-- SPINNING CARD -->
+      <div class="comparison-card">
+        <div class="comparison-header spinning">
+          <i class="fas fa-seedling me-2" ></i> SPINNING
+        </div>
+        <ul class="comparison-list">
+          <li><strong>Bahan Baku:</strong> Kapas</li>
+          <li><strong>Jumlah Proses:</strong> 7x proses</li>
+          <li><strong>Durasi:</strong> Lebih lama</li>
+          <li><strong>Output Harian:</strong> ~9 ton</li>
+          <li><strong>Fungsi:</strong> Mengubah kapas menjadi benang mentah</li>
+        </ul>
+      </div>
+
+      <!-- DTY CARD -->
+      <div class="comparison-card">
+        <div class="comparison-header dty">
+          <i class="fas fa-industry me-2"></i> DTY
+        </div>
+        <ul class="comparison-list">
+          <li><strong>Bahan Baku:</strong> Benang (POY)</li>
+          <li><strong>Jumlah Proses:</strong> 1x proses</li>
+          <li><strong>Durasi:</strong> Lebih cepat</li>
+          <li><strong>Output Harian:</strong> 3 ton</li>
+          <li><strong>Fungsi:</strong> Memberi tekstur pada benang polos</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="production" class="section production-section">
+  <div class="container">
+    <div class="section-title text-center">
+      <h2>Kapasitas Produksi</h2>
+      <p>Teknologi dan kapasitas produksi yang mendukung kebutuhan industri</p>
+    </div>
+
+    <!-- Statistik Produksi -->
+    <div class="stats-grid">
+      <div class="stat-box">
+        <div class="stat-number">216</div>
+        <div class="stat-label">Gulungan per Mesin</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number">24</div>
+        <div class="stat-label">Jam Operasional</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number">660</div>
+        <div class="stat-label">RPM Kecepatan</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number">8.5</div>
+        <div class="stat-label">Jam untuk 150 Bobbin</div>
+      </div>
+    </div>
+
+    <!-- Sistem Rak -->
+    <div class="content-grid fade-in">
+      <div>
+        <h4><i class="fas fa-cog me-2"></i> Sistem Rak & Gulungan</h4>
+        <p>Teknologi terdepan dari Jepang dengan sistem rak yang efisien untuk mengoptimalkan produksi benang DTY:</p>
+        <ul class="list-icons">
+          <li><i class="fas fa-check text-success me-2"></i> 1 rak = 24 gulungan benang</li>
+          <li><i class="fas fa-check text-success me-2"></i> 12 running (aktif produksi)</li>
+          <li><i class="fas fa-check text-success me-2"></i> 12 spare (cadangan siap pakai)</li>
+          <li><i class="fas fa-check text-success me-2"></i> Operasional 24 jam nonstop</li>
+        </ul>
+      </div>
+      <div class=" text-center">
+        <img src="Gambar/Rak.jpeg" width="550px" height="356px" style="object-fit: cover;" alt="Pabrik DTY" class="img-fluid shadow rounded">
+      </div>
+    </div>
+
+    <!-- Sistem POY -->
+    <div class="content-grid reverse fade-in">
+      <div class=" text-center">
+        <img src="Gambar/POY.jpeg" width="550px" height="356px" style="object-fit: cover;" alt="Pabrik DTY" class="img-fluid shadow rounded">
+      </div>
+      <div>
+        <h4><i class="fas fa-box me-2"></i> Sistem POY (Partially Oriented Yarn)</h4>
+        <p>POY adalah bahan baku utama dalam proses produksi DTY. Benang ini memiliki karakteristik khusus yang memerlukan proses lanjut:</p>
+        <ul class="list-icons">
+          <li><i class="fas fa-arrow-right text-primary me-2"></i>Benang awal dari box kemasan</li>
+          <li><i class="fas fa-arrow-right text-primary me-2"></i>Belum dapat menyerap warna dengan baik</li>
+          <li><i class="fas fa-arrow-right text-primary me-2"></i>Diproses menjadi DTY siap pakai</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Quality Control -->
+<section id="quality" class="section" style="padding-bottom: 0px !important;padding-top: 50px !important;">
+    <div class="container">
+        <div class="section-title fade-in">
+            <h2>Kontrol Kualitas</h2>
+            <p>Sistem pengujian dan grading yang ketat untuk memastikan kualitas terbaik</p>
+        </div>
+        
+        <!-- Quality Testing Process with Images -->
+        <div class="content-grid fade-in">
+            <div>
+                <h4><i class="fas fa-flask me-2"></i> Proses Pengujian Kualitas</h4>
+                <p class="mb-3">Sistem pengujian yang ketat untuk memastikan kualitas benang DTY sesuai standar internasional:</p>
+                <div class="mt-3">
+                    <div class="d-flex align-items-center mb-3">
+                        <span>1. Pengambilan sample benang secara acak</span>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <span>2. Dirajut dengan mesin knitting khusus</span>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <span>3. Proses celup warna untuk uji penyerapan</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <span>4. Evaluasi hasil (kualitas buruk = belang)</span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class=" text-center">
+                    <img src="Gambar/Mesin warna.jpeg" width="550px" height="306px" style="object-fit: contain;" alt="Pabrik DTY" class="img-fluid shadow rounded">
+                </div>
+            </div>
+        </div>
+
+        <div class="content-grid reverse fade-in" style="padding-top: 0px !important;">
+            <div>
+                <div class=" text-center">
+                    <img src="Gambar/packaging.jpeg" width="450px" height="306px" style="object-fit: cover;" alt="Pabrik DTY" class="img-fluid shadow rounded">
+                </div>
+            </div>
+            <div>
+                <h4><i class="fas fa-shipping-fast me-2"></i>Pengemasan & Distribusi</h4>
+                <p class="mb-3">Sistem distribusi yang efisien untuk memastikan produk sampai ke tangan pelanggan dalam kondisi optimal:</p>
+                <div class="mt-3">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-box text-success me-3"></i>
+                        <span>Benang dikemas dalam plastik berkualitas</span>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-warehouse text-success me-3"></i>
+                        <span>Dikirim langsung ke gudang Indorama</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-info-circle text-info me-3"></i>
+                        <span>DTY fokus produksi benang, bukan kain jadi</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="quality-grid fade-in">
+            <div class="quality-item">
+                <div class="grade-badge">Grade AX</div>
+                <h5>Premium Quality</h5>
+                <p><strong>5.5 kg</strong></p>
+                <p>Kualitas terbaik dengan berat optimal</p>
+            </div>
+            <div class="quality-item">
+                <div class="grade-badge">Grade A</div>
+                <h5>High Quality</h5>
+                <p><strong>5.0-5.4 kg</strong></p>
+                <p>Kualitas tinggi untuk kebutuhan standar</p>
+            </div>
+            <div class="quality-item">
+                <div class="grade-badge">Grade B</div>
+                <h5>Good Quality</h5>
+                <p><strong>4.5-4.9 kg</strong></p>
+                <p>Kualitas baik untuk aplikasi umum</p>
+            </div>
+            <div class="quality-item">
+                <div class="grade-badge">Grade C</div>
+                <h5>Standard Quality</h5>
+                <p><strong> < 4.5 kg</strong></p>
+                <p>Kualitas standar untuk kebutuhan khusus</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- K3 & Education -->
+<section class="section" style="background: #f8f9fa;padding-top: 50px !important ;padding-bottom: 20px !important;">
+    <div class="container">
+        <div class="section-title fade-in">
+            <h2>Keselamatan & Edukasi</h2>
+            <p>Komitmen terhadap keselamatan kerja dan pengembangan sumber daya manusia</p>
+        </div>
+
+        <!-- K3 Safety with Image -->
+        <div class="content-grid fade-in">
+            <div>
+                <h4><i class="fas fa-hard-hat me-2"></i> Keselamatan Kerja (K3)</h4>
+                <p class="mb-3">DTY berkomitmen penuh terhadap keselamatan dan kesehatan kerja dengan menerapkan standar K3 yang ketat:</p>
+                    <i class="fas fa-check text-success "></i>Pelatihan K3 berkala untuk semua karyawan <br>
+                    <i class="fas fa-check text-success"></i>Perlengkapan keselamatan lengkap tersedia <br>
+                    <i class="fas fa-check text-success "></i>Sepatu dan topi keselamatan wajib <br>
+                    <i class="fas fa-check text-success "></i>Standar keselamatan industri internasional <br>
+                    <i class="fas fa-check text-success"></i>Monitoring keselamatan 24/7
+            </div>
+            <div>
+                <div class=" text-center">
+                    <img src="Gambar/k3.jpg" width="450px" height="306px" style="object-fit: cover;" alt="Pabrik DTY" class="img-fluid shadow rounded">
+                </div>
+            </div>
+        </div>
+
+        <!-- Education Program with Image -->
+        <div class="content-grid reverse fade-in">
+            <div>
+                <div class=" text-center">
+                    <img src="Gambar/survey.jpg" width="450px" height="306px" style="object-fit: cover;" alt="Pabrik DTY" class="img-fluid shadow rounded">
+                </div>
+            </div>
+            <div>
+                <h4><i class="fas fa-graduation-cap me-2"></i> Program Edukasi Mahasiswa</h4>
+                <p class="mb-3">DTY menyediakan program edukasi untuk mempersiapkan mahasiswa menghadapi dunia kerja industri:</p>
+                
+                    <i class="fas fa-check text-success me-2"></i>Gambaran industri tekstil yang nyata <br>
+                    <i class="fas fa-check text-success me-2"></i>Persiapan mental dan skill dunia kerja <br>
+                    <i class="fas fa-check text-success me-2"></i>Pemahaman alur produksi benang <br>
+                    <i class="fas fa-check text-success me-2"></i>Proses quality control yang detail <br>
+                    <i class="fas fa-check text-success me-2"></i>Pengalaman langsung di lapangan
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Kontak & Mitra -->
+<section id="kontak" class="section contact-section" style="padding-top: 0px !important;">
+  <div class="container">
+    <div class="section-title fade-in">
+      <h2>Informasi Kontak</h2>
+      <p>Kami siap membantu kebutuhan Anda seputar proses DTY, penelitian, maupun pelatihan industri.</p>
+    </div>
+
+    <div class="contact-grid fade-in">
+      <!-- Kontak -->
+      <div class="contact-info">
+        <h4><i class="fas fa-map-marker-alt me-5 text-primary"></i> Alamat</h4>
+        <p>Kembangkuning, Jatiluhur, <br>Purwakarta, Jawa Barat, Indonesia</p>
+
+        <h4 class="mt-4"><i class="fas fa-phone me-3 text-success"></i> Telepon</h4>
+        <p>+62 812 3456 7890</p>
+
+        <h4 class="mt-4"><i class="fas fa-envelope me-3 text-danger"></i> Email</h4>
+        <p>dty.unit@poltektex.ac.id</p>
+    </div>
+
+      <!-- Mitra -->
+      <div class="contact-partners">
+        <h4 class="ms-2"> <i class="fas fa-handshake me-2text-warning"></i> Mitra Kami </h4>
+        <p>Kami bekerja sama dengan berbagai institusi, universitas, dan pelaku industri tekstil global.</p>
+
+        <div class="partners-gallery">
+          <img src="Gambar/mitra1.jpg" alt="Mitra 1">
+          <img src="Gambar/mitra2.png" alt="Mitra 2">
+          <img src="Gambar/mitra3.png" alt="Mitra 3">
+          <img src="Gambar/mitra4.jpg" alt="Mitra 4">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer-modern">
+  <div class="container">
+    <div class="footer-grid">
+      
+      <!-- Tentang -->
+      <div>
+        <h5><i class="fas fa-industry me-2"></i> DTY - Draw Textured Yarn</h5>
+        <p>Mitra terpercaya dalam industri tekstil sejak 2013. Menyediakan benang berkualitas tinggi dengan teknologi Jepang terdepan.</p>
+      </div>
+
+      <!-- Layanan -->
+      <div>
+        <h5>Layanan Kami</h5>
+        <ul class="footer-list">
+          <li>Produksi Benang DTY</li>
+          <li>Quality Control</li>
+          <li>Ekspor & Domestik</li>
+          <li>Konsultasi Industri</li>
+        </ul>
+      </div>
+
+      <!-- Pasar -->
+      <div>
+        <h5>Pasar Ekspor</h5>
+        <ul class="footer-list">
+          <li><i class="fas fa-globe me-2"></i> Turki</li>
+          <li><i class="fas fa-globe me-2"></i> Thailand</li>
+          <li><i class="fas fa-globe me-2"></i> Amerika</li>
+          <li><i class="fas fa-home me-2"></i> Indonesia</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom -->
+    <div class="footer-bottom mt-4">
+      <p>&copy; 2024 DTY - Draw Textured Yarn. Kerja sama strategis dengan PEI sejak 2013.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // Navbar background change on scroll
+    window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+            navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+        } else {
+            navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+        }
+    });
+
+    // Fade in animation on scroll
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, observerOptions);
+
+    // Observe all fade-in elements
+    document.querySelectorAll('.fade-in').forEach(el => {
+        observer.observe(el);
+    });
+
+    // Counter animation for stats
+    function animateCounter(element, target, duration = 2000) {
+        let start = 0;
+        const increment = target / (duration / 16);
+        
+        function updateCounter() {
+            start += increment;
+            if (start < target) {
+                element.textContent = Math.floor(start);
+                requestAnimationFrame(updateCounter);
+            } else {
+                element.textContent = target;
+            }
+        }
+        updateCounter();
+    }
+
+    // Animate counters when stats section is visible
+    const statsObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counters = entry.target.querySelectorAll('.stat-number');
+                counters.forEach(counter => {
+                    const target = parseFloat(counter.textContent);
+                    counter.textContent = '0';
+                    animateCounter(counter, target);
+                });
+                statsObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    const statsSection = document.querySelector('.stats-section');
+    if (statsSection) {
+        statsObserver.observe(statsSection);
+    }
+
+    // Add hover effects to cards
+    document.querySelectorAll('.card-custom, .process-card, .quality-item').forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-10px)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+    });
+
+    // Parallax effect for hero section
+    window.addEventListener('scroll', function() {
+        const scrolled = window.pageYOffset;
+        const hero = document.querySelector('.hero');
+        if (hero) {
+            hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+        }
+    });
+
+    // Add loading animation
+    window.addEventListener('load', function() {
+        document.body.style.opacity = '0';
+        document.body.style.transition = 'opacity 0.5s ease';
+        setTimeout(() => {
+            document.body.style.opacity = '1';
+        }, 100);
+    });
+</script>
